@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/rl_title_bpdtl"
+    android:background="@color/color_trans"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/beauty_back_bpdtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:drawableLeft="@drawable/fanhui_"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/fanhui_"
+        android:gravity="center"
+        android:text="    "
+        android:textColor="@color/color_white"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/beauty_title_bpdtl"
+        android:layout_toRightOf="@id/beauty_back_bpdtl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="魅惑美女屋"
+        android:maxEms="12"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/beauty_titles_bpdtl"
+        android:layout_toRightOf="@id/beauty_title_bpdtl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="魅惑美女屋"
+        android:textColor="@color/color_white"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/iv_report_bpdtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/jubao_hei" />
+
+
+</RelativeLayout>

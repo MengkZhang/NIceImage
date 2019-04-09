@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/ripple_bg"
+    android:layout_height="74dp">
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_imfsl"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/da_yanse_lv"/>
+
+    <ImageView
+        android:id="@+id/iv_pic_video_imfsl"
+        android:layout_toRightOf="@id/iv_imfsl"
+        android:layout_marginTop="4.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/biaoqian_meitu"/>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@id/iv_imfsl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title_imfsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性感靓丽比基尼"
+            android:textColor="@color/color_black"
+            />
+        <LinearLayout
+            android:id="@+id/ll_bo_master_imfsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bo_master_imfsl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="波主：妖娆惹眼美眉"
+                android:textSize="9sp"
+                android:textColor="@color/color_61db29"
+                />
+
+            <TextView
+                android:id="@+id/tv_id_imfsl"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID：8888"
+                android:textSize="9sp"
+                android:textColor="@color/color_909090"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_bfbfbf"/>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:background="@drawable/ripple_bg"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_dedede"/>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <ImageView
+        android:id="@+id/iv_vip_pic_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/vip_zuanshi"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_vip_name_ivol"
+        android:layout_toRightOf="@+id/iv_vip_pic_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="钻石VIP"
+        android:textColor="@color/color_3f3f3f"/>
+
+    <TextView
+        android:id="@+id/tv_wxll_ivol"
+        android:layout_below="@+id/iv_vip_pic_ivol"
+        android:layout_toRightOf="@+id/iv_vip_pic_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无限浏览"
+        android:textSize="13sp"
+        android:textColor="@color/color_999"/>
+
+    <TextView
+        android:id="@+id/tv_month_ivol"
+        android:layout_below="@+id/iv_vip_pic_ivol"
+        android:layout_toRightOf="@+id/tv_wxll_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="无限浏览"
+        android:textColor="@color/color_fe853d"/>
+
+
+    <TextView
+        android:layout_below="@+id/tv_wxll_ivol"
+        android:layout_toRightOf="@+id/iv_vip_pic_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录后端内无广告体验"
+        android:textColor="@color/color_999"/>
+
+    <TextView
+        android:id="@+id/tv_price_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$160.00"
+        android:textColor="@color/tab_indicator_color"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_old_price_ivol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="原价240.00"
+        android:textSize="12sp"
+        android:textColor="@color/color_7e7e7e"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_item_ivol"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignLeft="@+id/tv_old_price_ivol"
+            android:layout_alignStart="@+id/tv_old_price_ivol"
+            android:layout_alignTop="@+id/tv_month_ivol"
+            android:background="@drawable/home_pw_txt_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tv_ivol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="开通"
+                android:textColor="@drawable/home_pw_item_txt_selector"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_dedede"/>
+
+
+</LinearLayout>

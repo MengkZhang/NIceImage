@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/beauty_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/color_white"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:background="@color/color_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/beauty_back_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:drawableLeft="@drawable/fanhui_heiy"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/fanhui_heiy"
+            android:gravity="center"
+            android:text="  "
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_head_follow_bvtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <include layout="@layout/litle_head_layout" />
+        </RelativeLayout>
+
+        <!--收藏 评论 举报 下载-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_head_follow_bvtl"
+            android:layout_toRightOf="@id/beauty_back_video"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_collection_vdf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_collection_vdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/shoucang_hei_" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_comment_vdf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pinglun_hei" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_report_vdf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jubao_video" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_download_vdf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/xiazai_hei" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

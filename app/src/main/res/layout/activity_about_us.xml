@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical">
+
+        <include layout="@layout/beauty_title_layout"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_dedede"
+            />
+
+        <ImageView
+            android:id="@+id/iv_icon_about_me"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="47dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/icon"/>
+
+        <TextView
+            android:id="@+id/tv_app_name_about_us_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="魅惑美图屋"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#999999"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_update_aau"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/view"
+                android:layout_alignStart="@+id/view"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:text="检测更新"
+                android:textColor="@color/color_666666" />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jt_item_right"/>
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_dedede"
+                android:id="@+id/view" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_recommond_aau"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                android:text="推荐给好友"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jt_item_right"/>
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_dedede"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_qq_aau"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_qq_group_aau"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                android:text="QQ群：XXOO"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jt_item_right"/>
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_dedede"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#f5f5f5"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#b2b2b2"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="美图屋版权所有"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#b2b2b2"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Copyright @2017-2018 All Right Reserved"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

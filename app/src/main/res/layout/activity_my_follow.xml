@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f5f5f5"
+    android:fitsSystemWindows="true"
+    tools:context="com.xlkj.beautifulpicturehouse.module.mine.view.ui.activity.MyFollowActivity">
+
+    <LinearLayout
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/beauty_title_layout"/>
+        <LinearLayout
+            android:id="@+id/ll_content_amf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_amf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fillViewport="false"
+                app:tabIndicatorColor="@color/tab_indicator_color"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/tab_indicator_color"
+                app:tabTextAppearance="@style/TabLayoutTextStyle"
+                app:tabTextColor="#666666" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_amf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

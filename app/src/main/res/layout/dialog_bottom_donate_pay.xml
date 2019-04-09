@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_trans"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_alipay_dbdp"
+            android:background="@drawable/item_water_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/fukuanzfb"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:background="@color/color_a2a2a2"/>
+        <RelativeLayout
+            android:id="@+id/rl_weixin_pay_dbdp"
+            android:background="@drawable/item_water_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:drawableLeft="@drawable/rukuanwx"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cancel_dbdp"
+        android:background="@drawable/item_water_selector"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+
+</LinearLayout>

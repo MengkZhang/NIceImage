@@ -1,0 +1,145 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        //正式包的签名文件信息
+        release {
+            keyAlias 'mtw'
+            keyPassword 'ymkj2017'
+            storeFile file('mtw.jks')
+            storePassword 'ymkj2017'
+        }
+        //测试包的签名文件信息
+        debug {
+            keyAlias 'mtw'
+            keyPassword 'ymkj2017'
+            storeFile file('mtw.jks')
+            storePassword 'ymkj2017'
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.xlkj.beautifulpicturehouse"
+        minSdkVersion 16
+        //这里是为了不检测Android6.0的动态权限 如果上架到某一个商店失败 需要处理
+        targetSdkVersion 22
+        versionCode 3
+        versionName "1.0.11"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //这里是集成腾讯bugly需要的ndk配置
+        ndk {
+            // 设置cpu支持的SO库架构
+            //当使用NDK才能依赖的第三方库慎用慎用慎用 像百度云播放器遇到诺基亚Android8.0 CPU架构为aarch64的手机就直接挂掉了 下个版本剔除某度的漏币产品 用Bilibili内库替换
+            //百度云官方提供的jniLibs中支持的架构就5中'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'arm64-v8a'恰好就没有诺基亚的'aarch64'架构
+            //顺便查了下Google正式支持的三类七种CPU架构1.armeabi 2.armeabi-v7a 3.arm64-v8a 4.x86 5.x86_64 6.MIPS 7.MIPS64，所以诺基亚的aarch是个新品种
+            //百度云播放器在V1.0.1版本已被弃用
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'arm64-v8a', 'aarch64'
+        }
+    }
+    buildTypes {
+        //测试包
+        debug {
+            //不混淆
+            minifyEnabled false
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.debug
+
+        }
+
+        //正式包
+        release {
+            //该功能将从 App 中剥离出那些未使用的代码，并对符号的名称做模糊化处理，使得 App 难以被反向工程。
+            minifyEnabled true
+//            minifyEnabled false
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+            //Zipalign优化
+            zipAlignEnabled true
+            //设置shrinkResources属性，将会在 APK 中移除任何并非直接引用的资源。这时如果我们使用反射机制间接地访问资源，就会导致问题
+            shrinkResources true
+        }
+    }
+
+    //修改生成的apk名字
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${'mtw'}-${variant.versionName}-${buildTime()}.apk"
+        }
+    }
+}
+
+//gradle语句获取时间
+def buildTime() {
+    def df = new SimpleDateFormat("yyyy-MM-dd")
+    df.setTimeZone(TimeZone.getDefault())
+    return df.format(new Date())
+}
+
+dependencies {
+    //现在classes.dex文件已削减到占用 APK 的 57%。在我们的 Dex 文件中，大多数方法引用属于android.support软件包，因此我们将要去除该支持库。具体做法为：
+    //从build.gradle中彻底清除依赖块。总之用implementation比用compile要减小apk的体积
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    //banner内库
+    implementation 'com.youth.banner:banner:1.4.10'
+    //企业主流图片框架glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //圆形图片内库-其实完全可以用glide自己写 亲测有效 不过该库的github上star数量甚多 用也无妨
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //企业主流的网络框架retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    //ConverterFactory的gson依赖包
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //ConverterFactory的String依赖包
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    //ConverterFactory的RxJava2依赖包
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    //ConverterFactory的jackson依赖包
+    implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
+    //RxAndroid用于RxBus
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //微信官方SDK用于微信分享、登录、收藏、支付等功能需要的库 包含统计功能
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //todo 微信登录访问官网需要（mdzz）
+    implementation 'com.zhy:okhttputils:2.0.0'
+    //腾讯QQ官方SDK用于登录和分享
+    implementation files('libs/libammsdk.jar')
+    implementation files('libs/open_sdk_r5756_lite.jar')
+    //检测内存泄漏的工具
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //加载对话框
+    implementation 'com.kaopiz:kprogresshud:1.1.0'
+    //加载视图状态以及重新加载机制内库
+    implementation 'com.kingja.loadsir:loadsir:1.3.2'
+    //文件下载库
+    implementation 'com.liulishuo.filedownloader:library:1.6.9'
+    //Android6.0动态权限内库 github说compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'这个支持RxJava2 集成后报错 详见https://github.com/tbruyelle/RxPermissions
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    //腾讯bugly其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //黄油刀Butter Knife
+//    compile 'com.jakewharton:butterknife:8.8.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //节操播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.7'
+    //umeng统计
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+    //应用内捐赠-缺陷：支付之后没有回调
+    implementation 'com.github.didikee:AndroidDonate:0.1.0'
+}

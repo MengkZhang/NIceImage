@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--相关视频区-->
+    <LinearLayout
+        android:id="@+id/ll_about_video_fvdll"
+        android:layout_below="@id/rl_content_avd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/color_f5f5f5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333"
+                android:text="相关视频"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <!--水平滑动的布局-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shuiping_avd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"/>
+
+        <View
+            android:id="@+id/view_xian_fvdll"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/color_dedede" />
+
+    </LinearLayout>
+
+</LinearLayout>

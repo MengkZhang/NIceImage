@@ -1,0 +1,196 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:contentScrim="@color/color_white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        app:contentScrim="@color/color_white">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            app:contentScrim="@color/color_white"
+            app:layout_scrollFlags="scroll">
+
+            <!--banner区域和HorizontalScrollView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/we_media_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/search_edit_text_bg"
+                        android:gravity="center"
+                        android:hint="搜索"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/color_a2a2a2"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_fh"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    app:banner_default_image="@drawable/splash_new"
+                    app:image_scale_type="center_crop"
+                    app:title_height="0dp"></com.youth.banner.Banner>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView_fh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/meixiong"
+                            android:gravity="center"
+                            android:text="美胸"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/xinggan"
+                            android:gravity="center"
+                            android:text="性感"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/qingchun"
+                            android:gravity="center"
+                            android:text="清纯"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/oumei"
+                            android:gravity="center"
+                            android:text="欧美"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/meinv"
+                            android:gravity="center"
+                            android:text="美女"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/oumei"
+                            android:gravity="center"
+                            android:text="欧美"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:drawableTop="@drawable/meinv"
+                            android:gravity="center"
+                            android:text="美女"
+                            android:textColor="@color/color_black"
+                            android:textSize="13sp" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:background="@color/color_hui" />
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_fh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fillViewport="false"
+            app:tabIndicatorColor="@color/tab_indicator_color"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/tab_indicator_color"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="#666666"></android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <com.xlkj.beautifulpicturehouse.common.view.widget.WrapContentHeightViewPager
+            android:id="@+id/view_pager_fh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"></com.xlkj.beautifulpicturehouse.common.view.widget.WrapContentHeightViewPager>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_follow_content_tfl"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/color_trans">
+
+    <TextView
+        android:id="@+id/tv_djck_tfl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="点击查看"
+        android:textColor="@color/color_black" />
+
+    <TextView
+        android:id="@+id/tv_my_follow_tfl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_djck_tfl"
+        android:text="我的关注"
+        android:textColor="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/rl_follow_tfl"
+        android:layout_width="53dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/follow_selector">
+
+        <TextView
+            android:id="@+id/tv_is_follow_tfl"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关注" />
+    </RelativeLayout>
+
+</RelativeLayout>

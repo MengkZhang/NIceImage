@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    >
+
+    <EditText
+        android:id="@+id/et_comment_context_dbc"
+        android:layout_width="255dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/search_bg"
+        android:drawablePadding="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="发表精彩评论"
+        android:padding="5dp"
+        android:textColor="@color/color_999"
+        android:textColorHint="@color/color_999"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_item_dbc"
+        android:layout_width="72dp"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/home_pw_txt_selector"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_dbc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="评论"
+            android:textColor="@drawable/home_pw_item_txt_selector"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

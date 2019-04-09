@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_head_layout_hvfl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="187dp">
+        <ImageView
+            android:id="@+id/iv_hvfl"
+            android:layout_width="match_parent"
+            android:layout_height="187dp"
+            android:src="@drawable/zhubo_beijing"
+            android:scaleType="centerCrop"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_head_hvfl"
+            android:layout_width="69dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_height="69dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:src="@drawable/shipin_remen_wuguanzhu"
+            />
+
+        <!--粉丝 播放量-->
+        <TextView
+            android:id="@+id/tv_fens_plays_count_hvfl"
+            android:layout_below="@id/civ_head_hvfl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_fff"
+            android:text="粉丝 97 | 播放 1550"/>
+
+        <!--关注-->
+        <RelativeLayout
+            android:id="@+id/rl_follow_hvfl"
+            android:layout_width="53dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/follow_selector">
+
+            <TextView
+                android:id="@+id/tv_is_follow_lhl"
+                android:textColor="@color/color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="关注" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_videos_hvfl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black"
+        android:text="584视频"
+        android:drawablePadding="5dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/sizhao_remen_icon_vip"
+        android:layout_margin="6dp"
+        />
+
+
+
+</LinearLayout>

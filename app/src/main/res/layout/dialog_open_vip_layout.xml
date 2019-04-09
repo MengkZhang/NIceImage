@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_centerInParent="true"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dialog_white_bg_shape10"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@drawable/dialog_white_bg_up_shape10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_white"
+                    android:layout_centerInParent="true"
+                    android:text="温馨提示"/>
+
+            </RelativeLayout>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/open_vip_toash1"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="21dp"
+              android:textColor="#303030"
+              android:textSize="15sp"
+              />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal">
+                
+                <RelativeLayout
+                    android:id="@+id/rl_cancel_update_dialog"
+                    android:clickable="true"
+                    android:layout_width="127dp"
+                    android:layout_height="39.5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_cancel_selector">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下次再说"
+                        android:layout_centerInParent="true"
+                        android:textSize="18sp"
+                        android:textColor="#999999"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_update_update_dialog"
+                    android:clickable="true"
+                    android:layout_width="127dp"
+                    android:layout_height="39.5dp"
+
+                    android:background="@drawable/btn_selector">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即打赏"
+                        android:layout_centerInParent="true"
+                        android:textSize="18sp"
+                        android:textColor="#ffffff"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

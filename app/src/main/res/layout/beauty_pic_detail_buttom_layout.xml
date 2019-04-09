@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    android:background="@color/color_trans"
+    >
+
+    <TextView
+        android:id="@+id/tv_download_bpdbl"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:background="@drawable/buttom_selector"
+        android:text="下载"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:textColor="@color/color_white"
+        android:drawableTop="@drawable/xiazai"/>
+
+    <TextView
+        android:id="@+id/tv_collection_bpdbl"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="收藏"
+        android:background="@drawable/buttom_selector"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:textColor="@color/color_white"
+        android:drawableTop="@drawable/collect_n"/>
+
+    <TextView
+        android:id="@+id/tv_share_bpdbl"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="分享"
+        android:textSize="11sp"
+        android:background="@drawable/buttom_selector"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:drawableTop="@drawable/fenxiang"/>
+
+    <TextView
+        android:id="@+id/tv_comment_bpdbl"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:textSize="11sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        android:background="@drawable/buttom_selector"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:drawableTop="@drawable/pinglun"/>
+
+
+
+</LinearLayout>

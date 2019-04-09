@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scroll_view_fvdll"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/beauty_video_title_layout"/>
+
+            <!--视频播放区-->
+            <RelativeLayout
+                android:id="@+id/rl_content_avd2"
+                android:layout_below="@id/beauty_title_bar"
+                android:background="@color/color_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--相关视频区-->
+            <LinearLayout
+                android:id="@+id/ll_about_video_fvdll"
+                android:layout_below="@id/rl_content_avd2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/color_white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_333"
+                        android:text="相关视频"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <!--水平滑动的布局-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_shuiping_avd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"/>
+
+                <View
+                    android:id="@+id/view_xian_fvdll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/color_dedede" />
+
+            </LinearLayout>
+
+            <!--评论区-->
+            <LinearLayout
+                android:id="@+id/ll_commont_fvdll"
+                android:layout_below="@id/ll_about_video_fvdll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/color_white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_black"
+                        android:text="评论"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_comment_abvd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </LinearLayout>
+
+           <!-- <include layout="@layout/beauty_video_title_layout"/>-->
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

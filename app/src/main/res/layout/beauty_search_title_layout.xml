@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/color_f5f5f5"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/beauty_back_bstl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/fanhui_heiy"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/fanhui_heiy"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color_black"
+        android:textSize="15sp" />
+
+    <!-- android:background="@drawable/search_edit_text_bg"-->
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="50dp"
+        android:drawablePadding="5dp"
+        android:background="@drawable/search_bg">
+        <EditText
+            android:id="@+id/et_beauty_title"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:background="@drawable/search_bg"
+            android:textColor="@color/color_999"
+            android:textColorHint="@color/color_999"
+            android:padding="5dp"
+            android:drawableLeft="@drawable/sy_shousuo"
+            android:hint="点击搜索"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="13sp" />
+        <ImageView
+            android:id="@+id/iv_clear_bstl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/sousuoxiaochu"/>
+    </RelativeLayout>
+<!--    <EditText
+        android:id="@+id/et_beauty_title"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="50dp"
+        android:drawablePadding="5dp"
+        android:background="@drawable/search_bg"
+        android:textColor="@color/color_999"
+        android:textColorHint="@color/color_999"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/sy_shousuo"
+        android:hint="点击搜索"
+        android:focusable="true"
+        android:drawableRight="@drawable/sousuoxiaochu"
+        android:focusableInTouchMode="true"
+        android:textSize="13sp" />-->
+
+    <TextView
+        android:id="@+id/tv_search_bstl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  搜索  "
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_333"/>
+
+
+</FrameLayout>

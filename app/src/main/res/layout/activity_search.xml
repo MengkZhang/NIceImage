@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--标题-->
+        <include layout="@layout/beauty_search_title_layout" />
+
+        <!--包括热门标签和列表-->
+        <LinearLayout
+            android:id="@+id/rl_content_replace_as"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:text="热门标签"
+                    android:textColor="@color/color_333"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_dedede"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_as"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--搜索为空的布局start-->
+        <RelativeLayout
+            android:id="@+id/rl_search_empty_as"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:src="@drawable/shipin_remen_wuguanzhu"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/color_909090"
+                android:text="暂时没搜索到相关数据~"/>
+        </RelativeLayout>
+        <!--搜索为空的布局end-->
+
+        <!--被替换后的布局-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_search_content_sa"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--美图-->
+            <RelativeLayout
+                android:id="@+id/rl_pic_layout_as"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/sizhao_remen_icon_vip"
+                    android:text="美图"/>
+                <TextView
+                    android:id="@+id/tv_more_as"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:drawablePadding="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_999"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/jt_item_right"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_search_al"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--视频-->
+            <RelativeLayout
+                android:id="@+id/rl_video_layout_as"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/sizhao_remen_icon_vip"
+                    android:text="视频"/>
+                <TextView
+                    android:id="@+id/tv_more_video_as"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:drawablePadding="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_999"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/jt_item_right"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_search_video_al"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

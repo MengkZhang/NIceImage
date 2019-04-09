@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xlkj.beautifulpicturehouse.module.video.view.ui.activity.VideoDetailActivity">
+
+    <com.xlkj.beautifulpicturehouse.common.view.widget.MyJZVideoPlayerStandard
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_user_follow_atv"
+        android:background="@drawable/ripple_bg"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/videoplayer"
+        android:layout_height="wrap_content">
+        <include layout="@layout/user_litle_head_layout"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_user_four_view_atv"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/beauty_video_bottum_layout"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_about_video_comment_list_atv"
+        android:layout_below="@+id/rl_user_follow_atv"
+        android:layout_above="@+id/rl_user_four_view_atv"
+        android:background="@color/color_f5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

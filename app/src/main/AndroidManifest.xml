@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xlkj.beautifulpicturehouse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 解决OPPO-R9sk只请求一次联网权限问题 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 微信 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- bugly -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 创建与删除文件 支付宝和微信捐赠用到 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <application
+        android:name=".BeautyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <!-- 最后，为了让Glide能够识别我们自定义的MyGlideModule，还得在AndroidManifest.xml文件当中加入如下配置才行： -->
+        <meta-data
+            android:name="com.xlkj.beautifulpicturehouse.common.manager.glideprogress.MyGlideModule"
+            android:value="GlideModule" />
+
+        <meta-data android:value="5a6fd8aca40fa359d1000104" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="admin" android:name="UMENG_CHANNEL"/>
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".module.home.view.ui.activity.PicDetailActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.view.ui.activity.AboutUsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.home.view.ui.activity.HomeTypeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.home.view.ui.activity.HomeMoreTypeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".common.view.ui.activity.SearchActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.video.view.ui.activity.VideoTypeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.mine.view.ui.activity.VipActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.mine.view.ui.activity.UserInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+
+        <!-- android:theme="@style/Theme.AppCompat.Light.Dialog" -->
+        <activity
+            android:name=".module.mine.view.ui.activity.LoginActivity"
+            android:theme="@style/dialogstyle" />
+
+        <!-- QQ相关 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101448789" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信登录 分享 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <!--wx pay-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:name=".module.mine.view.ui.activity.MyDownLoadActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity android:name=".module.mine.view.ui.activity.LocalPicDetailActivity" />
+        <activity
+            android:name=".module.mine.view.ui.activity.MyFollowActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity
+            android:name=".module.mine.view.ui.activity.MyCollectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransAppTheme" />
+        <activity android:name=".module.mine.view.ui.activity.MyFootStayActivity" />
+        <activity android:name=".module.mine.view.ui.activity.BoMasterDetailActivity" />
+        <activity android:name=".module.home.view.ui.activity.HomeGoodChoiceDetailsActivity" />
+        <activity
+            android:name=".module.video.view.ui.activity.VideoDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".module.mine.view.ui.activity.LocalVideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

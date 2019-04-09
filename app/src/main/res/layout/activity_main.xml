@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    tools:context="com.xlkj.beautifulpicturehouse.module.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#90ffffff">
+
+
+            <RadioGroup
+                android:id="@+id/rg_activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="#90ffffff"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rb_home_activity_main"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/beauty_bottom_tab_menu_home_img_selector"
+                    android:gravity="center"
+                    android:text="首页"
+                    android:textColor="@drawable/beauty_bottom_menu_tab_text_color_selector"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_video_activity_main"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/beauty_bottom_tab_menu_video_img_selector"
+                    android:gravity="center"
+                    android:text="视频"
+                    android:textColor="@drawable/beauty_bottom_menu_tab_text_color_selector"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_mine_activity_main"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/beauty_bottom_tab_menu_mine_img_selector"
+                    android:gravity="center"
+                    android:text="我的"
+                    android:textColor="@drawable/beauty_bottom_menu_tab_text_color_selector"
+                    android:textSize="12sp"/>
+
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view_activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_above="@id/rg_activity_main"
+                android:background="@color/colorSplitColor"/>
+
+            <!--要被替换的帧布局-->
+            <FrameLayout
+                android:id="@+id/fl_content_activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/view_activity_main"></FrameLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

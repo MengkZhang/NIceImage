@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_head_ulhl"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/da_yanse_lv"/>
+
+    <LinearLayout
+
+        android:layout_toRightOf="@+id/civ_head_ulhl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_name_ulhl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/tab_indicator_color"
+            android:text="橘子蜜糖"/>
+        <TextView
+            android:id="@+id/tv_fens_ulhl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/tab_indicator_color"
+            android:text="88粉丝"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_follow_ulhl"
+        android:layout_width="53dp"
+        android:layout_height="23dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/follow_selector">
+
+        <TextView
+            android:id="@+id/tv_is_follow_ulhl"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关注" />
+    </RelativeLayout>
+</RelativeLayout>

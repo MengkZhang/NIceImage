@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_hhgdl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/da_yanse_lv"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_title_hhgdl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:text="一周TOP（12-12）"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_lite_title_hhgdl"
+            android:layout_below="@id/tv_title_hhgdl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宅男们都震精了~"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/color_666666"
+            android:textSize="13sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_follow_hhgdl"
+            android:layout_width="53dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/follow_selector">
+
+            <TextView
+                android:id="@+id/tv_is_follow_hhgdl"
+                android:textColor="@color/color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="关注" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

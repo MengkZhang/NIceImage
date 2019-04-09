@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f5f5f5"
+    android:fitsSystemWindows="true"
+    tools:context="com.xlkj.beautifulpicturehouse.module.mine.view.ui.activity.MyFootStayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <include layout="@layout/beauty_title_layout"/>
+
+        <LinearLayout
+            android:id="@+id/ll_content_amfs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_today_amfs"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+
+                        <View
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/view_point_red"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/circle_shape"/>
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/view_point_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_909090"
+                            android:textSize="16sp"
+                            android:text="今天"/>
+                    </RelativeLayout>
+                    
+                    <android.support.v7.widget.RecyclerView
+                        android:scrollbars="vertical"
+                        android:id="@+id/rv_amf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_history_amfs"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+
+                        <View
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/view_point_no_red"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/circle_shape2"/>
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/view_point_no_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_909090"
+                            android:textSize="16sp"
+                            android:text="历史"/>
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:scrollbars="vertical"
+                        android:id="@+id/rv_history_amf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
